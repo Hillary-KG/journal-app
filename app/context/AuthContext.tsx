@@ -5,13 +5,13 @@ import { NavigationContainer } from '@react-navigation/native';
 
 interface AuthProps {
     authState?: { token: string | null; authenticated: boolean | null };
-    onRegister?: (username: string, email: string, password: string) => Promise<any>;
+    onRegister? : (username: string, email: string, password: string) => Promise<any>;
     onLogin?: (username: string, password: string) => Promise<any>;
     onLogout?: () => Promise<any>;
 }
 
 const ACCESS_TOKEN = "access_token";
-export const API_URL = "http://192.168.1.21:5000/api/auth"
+export const API_URL = "http://192.168.100.40:5000/api/auth"
 const AuthContext = createContext<AuthProps>({});
 
 export const useAuth = () => {
@@ -26,6 +26,7 @@ export const AuthProvider = ({ children }: any) => {
         token: null,
         authenticated: null
     });
+
     useEffect(() => {
         const loadToken = async () => {
             const token = await secureStore.getItemAsync(ACCESS_TOKEN);

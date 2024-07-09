@@ -44,30 +44,30 @@ const styles = StyleSheet.create({
         resizeMode: "contain"
     },
 
-    form: {
-        gap: 15,
-        width: "60%"
-    },
-    input:{
-        height: 45,
-        borderWidth: 1,
+      form: {
+          gap: 15,
+          width: "60%"
+      },
+      input:{
+          height: 45,
+          borderWidth: 1,
+          borderRadius: 4,
+          padding: 10,
+          backgroundColor: "#fffff"
+      },
+      container: {
+          alignItems: "center",
+          width: "100%"
+      },
+      pressable: {
+        backgroundColor: "#000",
+        borderColor: "#000",
+        // margin: 3,
+        padding:6,
         borderRadius: 4,
-        padding: 10,
-        backgroundColor: "#fffff"
-    },
-    container: {
         alignItems: "center",
-        width: "100%"
-    },
-    pressable: {
-      backgroundColor: "#000",
-      borderColor: "#000",
-      // margin: 3,
-      padding:6,
-      borderRadius: 4,
-      alignItems: "center",
-      width: "50%"
-    },
+        width: "50%"
+      },
     buttons:{
       alignItems: "center"
     },
